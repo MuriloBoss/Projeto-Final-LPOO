@@ -31,6 +31,9 @@ public class Time implements Serializable {
         inverseJoinColumns = @JoinColumn(name = "jogador_id") // FK para Jogador
     )
     private List<Jogador> jogadores;
+    
+    
+
 
     public Time() {}
 
@@ -56,8 +59,20 @@ public class Time implements Serializable {
         return jogadores;
     }
 
+  
+
+    
+    
+    
+    
     public void setJogadores(List<Jogador> jogadores) {
         this.jogadores = jogadores;
     }
+    
+    
+    @Override
+public String toString() {
+    return nome + " (" + jogadores.size() + " jogadores)";
+}
 }
 

@@ -13,6 +13,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.*;
 import model.Carta;
+import model.Jogador;
+import model.Time;
+
 public class PersistenciaJPA implements InterfaceBD {
 
     private EntityManager entity;
@@ -96,5 +99,28 @@ public class PersistenciaJPA implements InterfaceBD {
             return null;
         }
     }
+    
+    public List<Jogador> getJogador(){
+    entity = getEntityManager();
+        try {
+            TypedQuery<Jogador> query = entity.createQuery("SELECT c FROM Jogador c", Jogador.class);
+            return query.getResultList();
+        } catch (Exception e) {
+            Logger.getLogger(PersistenciaJPA.class.getName()).log(Level.SEVERE, "Erro ao buscar jogadores", e);
+            return null;
+        }
+    }
+    
+    public List<Time> getTimes() {
+    entity = getEntityManager();
+    try {
+        TypedQuery<Time> query = entity.createQuery("SELECT t FROM Time t", Time.class);
+        return query.getResultList();
+    } catch (Exception e) {
+        Logger.getLogger(PersistenciaJPA.class.getName()).log(Level.SEVERE, "Erro ao buscar times", e);
+        return null;
+    }
 }
+}
+
 

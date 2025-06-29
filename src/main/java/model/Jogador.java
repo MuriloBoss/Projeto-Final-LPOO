@@ -30,12 +30,35 @@ public class Jogador implements Serializable {
 
     public Jogador() {}
 
-    public Integer getId() { return id; }
-    public void setId(Integer id) { this.id = id; }
+    public Integer getId() {
+        return id;
+    }
 
-    public String getNickname() { return nickname; }
-    public void setNickname(String nickname) { this.nickname = nickname; }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-    public int getLevel() { return level; }
-    public void setLevel(int level) { this.level = level; }
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    @Override
+    public String toString(){
+        return "Nickname: " + nickname + " - " + "Level: " + level;
+    }
+   
+    
+    
 }

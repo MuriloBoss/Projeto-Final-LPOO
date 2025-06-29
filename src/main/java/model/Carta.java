@@ -86,6 +86,9 @@ public class Carta implements Serializable {
         this.raridade = raridade;
     }
 
-    
+    @Override
+    public String toString(){
+        return "Nome: " + nome + " (" + categoria + "): A: " + ataque + " - D: " + defesa;
+    }
 }
 
