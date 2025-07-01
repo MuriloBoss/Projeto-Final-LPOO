@@ -70,6 +70,13 @@ src/
 
 ---
 
+## 📐 Diagrama de Classes UML
+
+O diagrama abaixo representa a modelagem do sistema, com os principais relacionamentos entre as entidades:
+
+![Diagrama de Classes](./Diagrama-Murilo.png)
+
+
 ## 👨‍💻 Autor
 
 Murilo Ossanes
